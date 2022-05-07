@@ -9,3 +9,10 @@ sudo apt install nginx -y
 sudo apt install python-apt -y
 sudo apt install -y git stress htop
 sudo git clone -b azure-vmss-autoscaling https://github.com/shannu2021/ansibletemplatetesting.git /myrepo
+
+######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING#######
+
+######GIVEN BELOW IN THE CUSTOM DATA OF AZURE VMSSS############################
+#cloud-config
+runcmd
+   -ansible-playbook /myrepo/playbook.yml
